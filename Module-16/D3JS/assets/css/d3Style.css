@@ -26,18 +26,16 @@
 /* font size dependent on radius, see app.js */
 .stateText {
   font-family: sans-serif;
-  fill: #fff;
+  fill: #000000;
   text-anchor: middle;
 }
 
-.stateCircle {
-  fill: #89bdd3;
-  stroke: #e3e3e3;
-}
-
 .chart {
-  display: block;
-  margin: 0;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  width: 1000px;
+  height: 550px;
 }
 
 .d3-tip {
@@ -46,14 +44,41 @@
   line-height: 1;
   line-height: 1.5em;
   color: #fff;
-  text-align: center;
+  text-align: left;
   text-transform: capitalize;
-  background: rgba(0, 0, 0, 0.8);
+  background: #FF8C42;
   border-radius: 4px;
 }
 
+.circle-text {
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 12px;
+  border-radius: 4px;
+  fill: white;
+  text-transform: capitalize;
+  }
+
+
 /* Mobile Rules */
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 1000px) {
+
+  .chart {
+    width: 800px;
+    height: 100%;
+    /* background-color: yellow; */
+    position: relative;    
+  }
+
+  .circle-text {
+    font-size: 13px;
+  }
+
+  .d3-tip{
+    font-size: 13px;
+  }
+
   .stateText {
     display: none;
   }
@@ -63,8 +88,16 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 560px) {
   .aText {
     font-size: 13px;
   }
+
+  .chart {
+    width: 100%;
+    height: 100%;
+    /* background-color: orange; */
+    position: relative;    
+  }
 }
+
